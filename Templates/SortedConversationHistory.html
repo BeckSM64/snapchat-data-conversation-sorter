@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sorted Conversation History</title>
+</head>
+<body>
+    <div>
+    % for line in data:
+        % if "From" in line:
+        <strong>${line["From"]}:</strong><br>
+        % else:
+        <strong>You:</strong><br>
+        % endif
+        <div>${line["Text"]}</div><div style="float:right">${line["Created"]}</div><br><br>
+    % endfor
+    </div>
+</body>
+</html>
